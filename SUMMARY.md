@@ -2,5 +2,5 @@
 
 * [Introduction](README.md)
 * [Observer](observer.md)
-* Design Patterns
+* [Design Patterns](design_patterns.md)
 
