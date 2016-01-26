@@ -1,8 +1,8 @@
 # Abstract Factory
 
+*object creational pattern*
+
 ```ruby
-# ABSTRACT FACTORY (object creational pattern)
-# ============================================
 
 # GoF definition (p. 87):
 # -----------------------
