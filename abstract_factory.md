@@ -2,23 +2,20 @@
 
 *object creational pattern*
 
+## GoF definition (p. 87):
+"Provide and interface for creating families of related or dependent objects
+without specifying their concrete classes."
+
+"Factories" encapsulate the creation of an object, and families of objects
+may have families factories with the same interface. This makes it easy to
+change the type of object built by the client by swapping out the factory.
+
+## Pros:
+ * The creation of objects is encapsulated within interchangeable factories.
+
+## Objects to be built:
+
 ```ruby
-# GoF definition (p. 87):
-# -----------------------
-# "Provide and interface for creating families of related or dependent objects
-# without specifying their concrete classes."
-
-# "Factories" encapsulate the creation of an object, and families of objects
-# may have families factories with the same interface. This makes it easy to 
-# change the type of object built by the client by swapping out the factory.
-
-# Pros:
-# -----
-#  * The creation of objects is encapsulated within interchangeable factories.
-
-# Objects to be built:
-# --------------------
-
 class Vehicle
   attr_accessor :model
 
@@ -38,10 +35,11 @@ class Van < Vehicle
     "This is a #{model}, a Van."
   end
 end
+```
 
-# Factories: 
-# ----------
+## Factories:
 
+```ruby
 class AbstractFactory
   def build(model)
     raise NotImplementedError
@@ -55,14 +53,16 @@ class SedanFactory < AbstractFactory
 end
 
 class VanFactory < AbstractFactory
-  def build```(model)
+  def build(model)
     Van.new(model)
   end
 end
+```
 
-# Client:
-# -------
+## Client
 
+
+```ruby
 class Dealership
   attr_accessor :factory
   attr_reader :inventory
@@ -80,9 +80,9 @@ class Dealership
     @inventory.each { |vehicle| puts vehicle.description }
   end
 end
+```
 
-# -----
-
+```ruby
 ford_dealership = Dealership.new(SedanFactory.new)
 ford_dealership.order_vehicles(3, "Focus")
 ford_dealership.list_inventory
