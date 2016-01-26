@@ -3,7 +3,6 @@
 *object creational pattern*
 
 ```ruby
-
 # GoF definition (p. 87):
 # -----------------------
 # "Provide and interface for creating families of related or dependent objects
