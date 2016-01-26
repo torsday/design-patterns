@@ -4,3 +4,5 @@
 * [Design Patterns](design_patterns.md)
    * [Strategy](strategy.md)
    * [Observer](observer.md)
+   * Abstract Factory
+
