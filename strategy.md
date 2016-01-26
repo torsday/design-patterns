@@ -3,6 +3,7 @@
 # STRATEGY (object behavioral pattern)
 # ====================================
 
+```ruby
 # GoF definition (p. 315): 
 # ------------------------
 # "Define a family of algorithms, encapsulate each one, and make them
@@ -62,3 +63,4 @@ my_grill = Grill.new(Burger.new)
 my_grill.grill_food
 my_grill.food = Hotdog.new # Strategies are interchangeable
 my_grill.grill_food # Same method call, now performed with a different strategy
+```
