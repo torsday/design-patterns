@@ -1,7 +1,6 @@
 # Strategy
 
-# STRATEGY (object behavioral pattern)
-# ====================================
+*object behavioral pattern*
 
 ```ruby
 # GoF definition (p. 315): 
